@@ -26,3 +26,9 @@ public class Evento{
 	private String motivo;
 	public void Evento(){}
 }
+
+public class Conversacion{
+	private Persona remitente;
+	private String mensaje;
+	public void Conversacion(Persona r, String m){this.remitente = r; this.mensaje = m;}
+}
