@@ -47,7 +47,7 @@ public class Aerolinea{
 			vuelosDisponibles(opcion).newPasajero(cliente);
 		}
 		else{
-			System.out.println("Vuelva pronto!");
+			System.out.println("Vuelva pronto!!");
 		}
 	}
 }
