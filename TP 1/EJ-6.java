@@ -72,6 +72,6 @@ public class Peluqueria{
 	}
 
 	public void turnosDisponibles(){
-
+ 
 	}
 }
