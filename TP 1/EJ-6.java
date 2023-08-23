@@ -2,7 +2,7 @@ public class Persona{
 	private String nombre;
 	public String getNombre(){return this.nombre;}
 }
-
+ 
 public class Turno{
 	private bool ocupado = false;
 	private int fecha;
