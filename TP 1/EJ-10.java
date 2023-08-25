@@ -16,7 +16,7 @@ public class Contacto{
   public String getCiudad(){return this.ciudad;}
   public int getEdad(){return this.edad;}
 
-  public void toString(){
+  public String toString(){
     System.out.println(getNombre());
     System.out.println(getTelefono());
     System.out.println(getCiudad());
