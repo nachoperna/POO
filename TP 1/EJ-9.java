@@ -28,19 +28,18 @@ public class Mazo{
 
   public Personaje getHeroe(){ // devuelve una carta heroe del mazo
     int i = Math.random()*(heroes.size());
-    Persona h = heroes(i);
-    delete heroes(i);
+    Persona h = heroes.get(i);
+    heroes.remove(i);
     return h;
   }
   public Personaje getVillano(){ // devuelve una carta villano del mazo
     int i = Math.random()*(villanos.size()); 
-    Personaje v = villanos(i);
-    delete villanos(i);
+    Personaje v = villanos.get(i);
+    villanos.remove(i);
     return v;
   }
-  public bool esVacio(){
-    if ((heroes == null) && (villanos == null)) { return true; }
-    return false;
+  public boolean esVacio(){
+    return ((heroes.isEmpty()) && (villanos.isEmpty()));
   }
 }
 
