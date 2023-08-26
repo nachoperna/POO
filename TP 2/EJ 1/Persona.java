@@ -1,6 +1,8 @@
+import java.time.LocalDate;
+
 public class Persona {
     private String nombre;
-    private String nacimiento;
+    private LocalDate nacimiento;
     private char sexo;
     private int dni;
     private int edad;
@@ -16,11 +18,15 @@ public class Persona {
         this.nombre = nombre;
     }
 
-    public Persona(int dni, String nombre, String nacimiento) {
+    public Persona(int dni, String nombre, LocalDate nacimiento) {
         this.dni = dni;
         this.nombre = nombre;
         this.nacimiento = nacimiento;
-        this.edad = 22; // this.edad = funcion piso(local date - fecha de nacimiento)
+    }
+
+    public void setEdad() {
+        LocalDate hoy = LocalDate.now();
+        edad = hoy.getYear() - nacimiento.getYear();
     }
 
     public void setPeso(float peso) {
@@ -44,8 +50,8 @@ public class Persona {
     }
 
     public Boolean cumpleaños() {
-        return false;
-        // establecer local date y variable date para fecha nacimiento
+        LocalDate hoy = LocalDate.now();
+        return nacimiento.getDayOfYear() == hoy.getDayOfYear();
     }
 
     public Boolean esMayor() {
@@ -62,18 +68,20 @@ public class Persona {
 
     public String toString() {
         String print = "";
-        print += " /Nombre: " + nombre;
-        print += " /Edad: " + edad;
-        print += " /Dni: " + dni;
-        print += " /Nacimiento: " + nacimiento;
-        print += " /Sexo: " + sexo;
-        print += " /Peso: " + peso;
-        print += " /Altura: " + altura;
+        print += " [Nombre: " + nombre + "]";
+        print += " [Edad: " + edad + "años ]";
+        print += " [Dni: " + dni + "]";
+        print += " [Nacimiento: " + nacimiento.toString() + "]";
+        print += " [Sexo: " + sexo + "]";
+        print += " [Peso: " + peso + "]";
+        print += " [Altura: " + altura + "]";
+        print += " [Cumple aÑos?: " + cumpleaños() + "]";
         return print;
     }
 
     public static void main(String[] args) {
-        Persona p = new Persona(42883287, "N N ", null);
+        Persona p = new Persona(42883287, "N N ", LocalDate.of(2000, 1, 1));
+        p.setEdad();
         p.setSexo('F');
         p.setAltura(1);
         p.setPeso(1);
