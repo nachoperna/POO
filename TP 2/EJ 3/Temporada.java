@@ -1,15 +1,14 @@
 import java.util.ArrayList;
 
-public class Temporada<Episodio> {
+public class Temporada {
 
     private ArrayList<Episodio> episodios = new ArrayList<>();
 
-    public Temporada() {
-
-    }
-
-    public void setEpisodios(ArrayList<Episodio> episodios) {
-        this.episodios = episodios;
+    public Temporada(int cantEpisodios) {
+        for (int i = 0; i < cantEpisodios; i++) {
+            Episodio e = new Episodio(null, null);
+            episodios.add(e);
+        }
     }
 
     public void newEpisodio(Episodio e) {

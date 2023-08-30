@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public class Serie<Temporada> {
+public class Serie {
     private String titulo;
     private String descripcion;
     private String creador;
@@ -14,8 +14,16 @@ public class Serie<Temporada> {
         genero = g;
     }
 
-    public void newTemporada(Temporada t) {
+    public void newTemporada(int cantEpisodios) {
+        Temporada t = new Temporada(cantEpisodios);
         temporadas.add(t);
+    }
+
+    public void temporadasTotales(int x) { // añade directamente la cantidad de temporadas desde el main
+        for (int i = 0; i < x; i++) {
+            Temporada t = new Temporada((int) Math.random()); // cantidad de episodios random
+            temporadas.add(t);
+        }
     }
 
     public String getCreador() {
@@ -72,6 +80,17 @@ public class Serie<Temporada> {
     }
 
     public static void main(String[] args) {
-
+        // EJEMPLO DE SERIE: SUITS
+        Serie serie = new Serie("Suits", "Abogados", "James Whitmore", "Drama Legal");
+        // serie.temporadasTotales(9);
+        serie.newTemporada(12); // TEMPORADA 1
+        serie.newTemporada(16); // TEMPORADA 2
+        serie.newTemporada(16); // TEMPORADA 3
+        serie.newTemporada(16); // TEMPORADA 4
+        serie.newTemporada(16); // TEMPORADA 5
+        serie.newTemporada(16); // TEMPORADA 6
+        serie.newTemporada(16); // TEMPORADA 7
+        serie.newTemporada(16); // TEMPORADA 8
+        serie.newTemporada(10); // TEMPORADA 9
     }
 }
