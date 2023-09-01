@@ -1,0 +1,3 @@
+Tomar el ejercicio un poco mas especifico, no tan asbtracto
+La clase sensor debe tener variable nombre de zona y boolean activo
+Vidrios puertas ventanas y movimientos deben ser instancias de sensor
