@@ -1,0 +1,1 @@
+Todos los filtros implementados deben devolver un boolean para saber si tal objeto cumple con una condicion. No utilizar Comparable<> en esos casos.
