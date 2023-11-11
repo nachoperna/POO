@@ -1,0 +1,9 @@
+import java.util.ArrayList;
+
+public abstract class Elemento {
+    public abstract String getCategoria();
+
+    public abstract ArrayList<String> getPalabras_clave();
+
+    public abstract ArrayList<Noticia> listar(Filtro filtro);
+}
