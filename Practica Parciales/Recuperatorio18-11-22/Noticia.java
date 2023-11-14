@@ -22,14 +22,17 @@ public class Noticia extends Elemento {
         return palabras_clave;
     }
 
+    @Override
     public String getContenido() {
         return contenido;
     }
 
+    @Override
     public String getTitulo() {
         return titulo;
     }
 
+    @Override
     public String getAutor() {
         return autor;
     }
