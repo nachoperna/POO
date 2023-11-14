@@ -49,4 +49,9 @@ public class Seccion extends Elemento {
         return " ";
     }
 
+    @Override
+    public void addPalabras(ArrayList<String> palabras) {
+
+    }
+
 }
