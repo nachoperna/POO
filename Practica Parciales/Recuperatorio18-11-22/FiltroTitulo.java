@@ -7,7 +7,7 @@ public class FiltroTitulo implements Filtro {
 
     @Override
     public boolean cumple(Elemento e) {
-        return ((Noticia) (e)).getTitulo().equals(titulo);
+        return e.getTitulo().equals(titulo);
     }
 
 }
