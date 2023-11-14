@@ -13,4 +13,6 @@ public abstract class Elemento {
 
     public abstract String getTitulo();
 
+    public abstract void addPalabras(ArrayList<String> palabras);
+
 }
