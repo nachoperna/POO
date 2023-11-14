@@ -12,6 +12,10 @@ public class Noticia extends Elemento {
         this.palabras_clave = palabras_clave;
     }
 
+    public void addPalabras(ArrayList<String> palabras) {
+        palabras_clave.addAll(palabras);
+    }
+
     @Override
     public String getCategoria() {
         return categoria;
@@ -53,9 +57,7 @@ public class Noticia extends Elemento {
 
     public void completaPalabras(ArrayList<Condicion> c) { // recorre una lista de condiciones
         for (Condicion condicion : c) {
-            if (condicion.cumple(this)) { // si cumple la condicion
-                palabras_clave.addAll(condicion.getPalabra()); // agrega la palabra asociada
-            }
+            condicion.ejecuta(this);
         }
     }
 }
