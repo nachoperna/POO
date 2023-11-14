@@ -34,4 +34,19 @@ public class Seccion extends Elemento {
         return aux;
     }
 
+    @Override
+    public String getAutor() {
+        return " ";
+    }
+
+    @Override
+    public String getContenido() {
+        return " ";
+    }
+
+    @Override
+    public String getTitulo() {
+        return " ";
+    }
+
 }
