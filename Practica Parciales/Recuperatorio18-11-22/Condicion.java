@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public class Condicion implements Filtro {
+public class Condicion {
     private Filtro f;
     private ArrayList<String> palabra = new ArrayList<>();
 
@@ -9,13 +9,9 @@ public class Condicion implements Filtro {
         this.palabra = palabra;
     }
 
-    @Override
-    public boolean cumple(Elemento e) {
-        return f.cumple(e);
+    public void ejecuta(Elemento e) {
+        if (f.cumple(e)) {
+            e.addPalabras(palabra);
+        }
     }
-
-    public ArrayList<String> getPalabra() {
-        return palabra;
-    }
-
 }
